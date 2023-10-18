@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "hse-cb"
+version = "0.1.0"
+description = "Tg Channels clusterization for CB HSE course"
+authors = ["ADBuk, adecate"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.13"
+bs4 = "^0.0.1"
+requests = "^2.31.0"
+pandas = "^2.1.1"
+numpy = "^1.26.1"
+black = "^23.9.1"
+telethon = "^1.31.0"
+lxml = "^4.9.3"
+transformers = "^4.34.0"
+torch = "^2.1.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

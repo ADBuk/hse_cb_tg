@@ -3,20 +3,6 @@ from bs4 import BeautifulSoup
 import re
 from typing import List
 
-urls_tg = [
-    "https://rsshub.app/telegram/channel/banksta",
-    "https://rsshub.app/telegram/channel/AlfaBank",
-    "https://rsshub.app/telegram/channel/centralbank_russia",
-    "https://rsshub.app/telegram/channel/M24_Dengi",
-    "https://rsshub.app/telegram/channel/financelist",
-    "https://rsshub.app/telegram/channel/Finindie",
-    "https://rsshub.app/telegram/channel/sberbank",
-    "https://rsshub.app/telegram/channel/SberInvestments",
-    "https://rsshub.app/telegram/channel/suverenka",
-    "https://rsshub.app/telegram/channel/tinkoffbank",
-    "https://rsshub.app/telegram/channel/tinkoff_invest_official",
-    "https://rsshub.app/telegram/channel/bankvtb",
-]
 # parsing garbage
 chars_to_remove = ["<br>", "</u>", "</a>", "</b>", "</i>", "tg-emoj", "&nsp"]
 # for rus texts only
@@ -66,6 +52,3 @@ def all_news_per_day(urls: List) -> List:
         texts.extend(get_tg_clean_texts(i))
 
     return texts
-
-
-print(all_news_per_day(urls_tg))

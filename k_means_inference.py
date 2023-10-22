@@ -1,6 +1,7 @@
 import numpy as np
 from typing import List
 from sklearn.metrics.pairwise import cosine_similarity
+from sklearn.metrics import silhouette_score
 
 centroids = np.load("centroids.npy")
 
@@ -27,3 +28,14 @@ def get_clusters(embeddings: np.array) -> List:
         clusters.append(cosine_similarities.index(max_value))
 
     return clusters
+
+
+def compute_metrics(embeddings: np.array, clusters: List) -> float:
+    """
+    compute silhouette score of clusterization
+    :param embeddings: BERT embeddings
+    :param clusters: clusters after k-means
+    :return: silhouette score Float
+    """
+
+    return silhouette_score(embeddings, clusters)

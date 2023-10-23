@@ -32,3 +32,4 @@ metrics = k_means_inference.compute_metrics(embeddings, clusters)
 pd.DataFrame({"Texts": raw_texts, "Clusters": clusters}).to_excel(
     f'tg_channels_clusters_{strftime("%Y_%d_%m", gmtime())}.xlsx', index=False
 )
+print('Excel file Done!')

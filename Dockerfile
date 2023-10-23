@@ -3,7 +3,7 @@ RUN echo 'Build is launched'
 
 WORKDIR /root/docker_cb
 
-COPY poetry.lock pyproject.toml ./ 
+COPY poetry.lock pyproject.toml main.py ./ 
 
 RUN python -m pip install --no-cache-dir poetry==1.4.2 \
     && poetry config virtualenvs.create false \
@@ -12,4 +12,4 @@ RUN python -m pip install --no-cache-dir poetry==1.4.2 \
 
 
 COPY . /root/docker_cb
-CMD ["python", "main.py"] 
+CMD ["python", "./main.py"] 

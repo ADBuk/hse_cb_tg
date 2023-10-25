@@ -7,7 +7,7 @@ Telegram posts cluster analysis for HSE CB course
 2) Загрузки sBERT'a и получения эмбеддиногов - bert_encoding.py
 3) Кластеризации - Clustering.ipynb
 
-Оюъединение всех компонент в пайплайн и его контейнеризацию
+Объединение всех компонент в пайплайн и его контейнеризацию
 
 А так же данные:
 -raw_tg_data.zip 
